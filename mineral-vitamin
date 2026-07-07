@@ -1,1 +1,949 @@
-mineral-vitamin-guide.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Minerals & Vitamins Every Woman Should Know | LifestyleU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg:               #faf7f2;
+      --card-bg:          #ffffff;
+      --text:             #3a3028;
+      --text-muted:       #7a6e66;
+      --sage:             #6b9470;
+      --sage-light:       #eef4ee;
+      --sage-border:      #bdd6bf;
+      --terracotta:       #b86448;
+      --terracotta-light: #fdf0eb;
+      --rose:             #a8737c;
+      --rose-light:       #fdf0f2;
+      --rose-border:      #ddb8bc;
+      --tip-bg:           #f7f2ec;
+      --border:           #e8e0d6;
+      --shadow:           0 2px 14px rgba(58, 48, 40, 0.06), 0 1px 3px rgba(58, 48, 40, 0.04);
+      --radius:           14px;
+      --nav-height:       100px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background-color: var(--bg);
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    /* ==============================
+       STICKY NAV
+    ============================== */
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.96);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 672px;
+      margin: 0 auto;
+      padding: 10px 16px 12px;
+    }
+
+    .nav-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .nav-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      height: 30px;
+      padding: 0 11px;
+      background: var(--card-bg);
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+      border: 1px solid var(--sage-border);
+    }
+
+    .nav-pill:hover,
+    .nav-pill:focus {
+      background: var(--sage-light);
+      color: var(--sage);
+      outline: none;
+    }
+
+    .nav-pill.vitamin {
+      border-color: var(--rose-border);
+    }
+
+    .nav-pill.vitamin:hover,
+    .nav-pill.vitamin:focus {
+      background: var(--rose-light);
+      color: var(--rose);
+    }
+
+    /* Scroll offset for sticky nav */
+    [id] {
+      scroll-margin-top: 120px;
+    }
+
+    /* ==============================
+       MAIN WRAPPER
+    ============================== */
+
+    .wrapper {
+      max-width: 672px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* ==============================
+       PAGE HEADER
+    ============================== */
+
+    .page-header {
+      padding: 44px 0 32px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      font-size: clamp(24px, 6vw, 38px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .page-header .subtitle {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(15px, 3.5vw, 17.5px);
+      color: var(--text-muted);
+      line-height: 1.55;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* ==============================
+       DISCLAIMER
+    ============================== */
+
+    .disclaimer {
+      background: var(--tip-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-bottom: 32px;
+    }
+
+    .disclaimer-tag {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+
+    .disclaimer p {
+      font-size: 13.5px;
+      line-height: 1.55;
+      color: var(--text-muted);
+    }
+
+    /* ==============================
+       INTRO
+    ============================== */
+
+    .intro {
+      margin-bottom: 44px;
+    }
+
+    .intro p {
+      font-size: 16.5px;
+      line-height: 1.7;
+      color: var(--text);
+    }
+
+    .intro p + p {
+      margin-top: 16px;
+    }
+
+    /* ==============================
+       SECTION HEADINGS
+    ============================== */
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-heading h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(20px, 5vw, 26px);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .section-heading.minerals h2 { color: var(--sage); }
+    .section-heading.vitamins h2 { color: var(--rose); }
+
+    .section-rule {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ==============================
+       SECTION WRAPPERS
+    ============================== */
+
+    .minerals-section {
+      margin-bottom: 12px;
+    }
+
+    .vitamins-section {
+      margin-top: 24px;
+    }
+
+    /* ==============================
+       NUTRIENT CARDS
+    ============================== */
+
+    .nutrient-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .card-top {
+      padding: 22px 22px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-top h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(17px, 4.5vw, 21px);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 7px;
+      line-height: 1.3;
+    }
+
+    .card-top .tagline {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .card-note {
+      font-size: 0.72em;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .card-body {
+      padding: 18px 22px 22px;
+    }
+
+    .symptoms-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .symptom-list {
+      list-style: none;
+      margin: 0 0 20px;
+    }
+
+    .symptom-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      padding: 7px 0;
+      font-size: 15.5px;
+      line-height: 1.5;
+      color: var(--text);
+    }
+
+    .symptom-list li + li {
+      border-top: 1px solid #f0ece7;
+    }
+
+    .bullet {
+      display: inline-block;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 8px;
+    }
+
+    .minerals-section .bullet { background-color: var(--sage); }
+    .vitamins-section .bullet { background-color: var(--rose); }
+
+    /* Quick tip */
+    .quick-tip {
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .minerals-section .quick-tip {
+      background: var(--sage-light);
+      border-left: 3px solid var(--sage);
+    }
+
+    .vitamins-section .quick-tip {
+      background: var(--rose-light);
+      border-left: 3px solid var(--rose);
+    }
+
+    .tip-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 7px;
+    }
+
+    .minerals-section .tip-label { color: var(--sage); }
+    .vitamins-section .tip-label { color: var(--rose); }
+
+    .quick-tip p {
+      font-size: 14.5px;
+      line-height: 1.65;
+      color: var(--text);
+    }
+
+    .quick-tip p + p {
+      margin-top: 10px;
+    }
+
+    /* ==============================
+       CLOSING CTA
+    ============================== */
+
+    .closing {
+      background: linear-gradient(145deg, var(--sage-light) 0%, #fffaf8 50%, var(--rose-light) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      margin: 24px 0 32px;
+    }
+
+    .closing h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(17px, 4.5vw, 22px);
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+
+    .closing p {
+      font-size: 15.5px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    .brand-line {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 12px;
+    }
+
+    .brand-line a {
+      color: var(--terracotta);
+      text-decoration: none;
+    }
+
+    .brand-line a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 6px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 18px;
+      padding: 14px 28px;
+      min-height: 50px;
+      background: var(--terracotta);
+      color: #ffffff;
+      font-family: 'Lato', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      border-radius: 10px;
+      transition: background 0.15s ease, transform 0.1s ease;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .cta-btn:hover,
+    .cta-btn:focus {
+      background: #9e5138;
+      outline: none;
+    }
+
+    .cta-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    .page-footer {
+      padding: 8px 0 52px;
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      opacity: 0.7;
+    }
+
+    /* ==============================
+       RESPONSIVE FINE-TUNING
+    ============================== */
+
+    @media (max-width: 400px) {
+      .card-top,
+      .card-body {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+
+    @media (max-width: 375px) {
+      :root { --radius: 10px; }
+
+      body { font-size: 15.5px; }
+
+      .page-header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STICKY NAV -->
+  <nav class="sticky-nav" aria-label="Jump to nutrient section">
+    <div class="nav-inner">
+      <div class="nav-brand">LifestyleU &middot; @laceeiskk</div>
+      <div class="nav-label">Jump to:</div>
+      <div class="nav-pills" role="list">
+        <a href="#magnesium" class="nav-pill" role="listitem">Magnesium</a>
+        <a href="#iodine"    class="nav-pill" role="listitem">Iodine</a>
+        <a href="#zinc"      class="nav-pill" role="listitem">Zinc</a>
+        <a href="#copper"    class="nav-pill" role="listitem">Copper</a>
+        <a href="#selenium"  class="nav-pill" role="listitem">Selenium</a>
+        <a href="#calcium"   class="nav-pill" role="listitem">Calcium</a>
+        <a href="#boron"     class="nav-pill" role="listitem">Boron</a>
+        <a href="#sodium"    class="nav-pill" role="listitem">Sodium</a>
+        <a href="#iron"      class="nav-pill" role="listitem">Iron</a>
+        <a href="#vitamin-d" class="nav-pill vitamin" role="listitem">Vitamin D</a>
+        <a href="#b12"       class="nav-pill vitamin" role="listitem">B12</a>
+        <a href="#b6"        class="nav-pill vitamin" role="listitem">B6</a>
+        <a href="#folate"    class="nav-pill vitamin" role="listitem">Folate</a>
+        <a href="#vitamin-a" class="nav-pill vitamin" role="listitem">Vitamin A</a>
+        <a href="#vitamin-k2" class="nav-pill vitamin" role="listitem">Vitamin K2</a>
+        <a href="#omega3"    class="nav-pill vitamin" role="listitem">Omega-3s</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrapper">
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+      <p class="brand-line">LifestyleU &middot; <a href="https://www.instagram.com/laceeiskk" target="_blank" rel="noopener">@laceeiskk</a></p>
+      <h1>The Minerals &amp; Vitamins Every Woman Should Know</h1>
+      <p class="subtitle">Why &ldquo;normal&rdquo; labs don&rsquo;t always mean you&rsquo;re not deficient &mdash; and what your symptoms might actually be telling you.</p>
+    </header>
+
+    <!-- TOP DISCLAIMER -->
+    <aside class="disclaimer" role="note" aria-label="Medical disclaimer">
+      <span class="disclaimer-tag">Important note</span>
+      <p>This guide is for educational purposes only and is not intended to diagnose, treat, or replace medical care. Always work with your healthcare provider before making changes to your supplements or health routine.</p>
+    </aside>
+
+    <!-- INTRO -->
+    <section class="intro" aria-label="Introduction">
+      <p>Ever feel like you&rsquo;re doing everything &ldquo;right&rdquo; &mdash; eating well, exercising, sleeping (sort of) &mdash; but your body still isn&rsquo;t cooperating? Fatigue, mood swings, stubborn skin issues, or a cycle that feels off?</p>
+      <p>Bloodwork can come back &ldquo;normal&rdquo; and still miss the full picture. Minerals and vitamins don&rsquo;t just need to be present in your body &mdash; they need to be balanced, absorbed, and actually usable by your cells. This guide walks through the most common nutrients we see out of balance in women, what it might feel like in your body, and simple ways to start supporting yourself.</p>
+    </section>
+
+    <!-- ==============================
+         MINERALS
+    ============================== -->
+    <section class="minerals-section" aria-labelledby="minerals-heading">
+
+      <div class="section-heading minerals">
+        <h2 id="minerals-heading">Minerals</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </div>
+
+      <!-- MAGNESIUM -->
+      <article class="nutrient-card" id="magnesium" aria-labelledby="magnesium-heading">
+        <div class="card-top">
+          <h3 id="magnesium-heading">Magnesium</h3>
+          <p class="tagline">The mineral that runs 500+ processes in your body &mdash; and the one you&rsquo;re most likely running low on.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Waking up between 2&ndash;4am and not being able to fall back asleep</li>
+            <li><span class="bullet" aria-hidden="true"></span>PMS, cramps, or period pain that feels worse than it should</li>
+            <li><span class="bullet" aria-hidden="true"></span>Muscle twitches, tension, or restless legs</li>
+            <li><span class="bullet" aria-hidden="true"></span>Feeling anxious or &ldquo;on edge&rdquo; for no clear reason</li>
+            <li><span class="bullet" aria-hidden="true"></span>Headaches or migraines that show up around your cycle</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Leafy greens, pumpkin seeds, and dark chocolate are natural sources &mdash; and a warm Epsom salt bath before bed can help your body wind down.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- IODINE -->
+      <article class="nutrient-card" id="iodine" aria-labelledby="iodine-heading">
+        <div class="card-top">
+          <h3 id="iodine-heading">Iodine</h3>
+          <p class="tagline">Not just a &ldquo;thyroid thing&rdquo; &mdash; it supports your metabolism, your cycle, and your breast and ovarian tissue.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Cold hands and feet, even when everyone else is warm</li>
+            <li><span class="bullet" aria-hidden="true"></span>Feeling like your metabolism has slowed to a crawl</li>
+            <li><span class="bullet" aria-hidden="true"></span>Heavy, irregular, or unpredictable periods</li>
+            <li><span class="bullet" aria-hidden="true"></span>Hair thinning (especially the outer third of your eyebrows)</li>
+            <li><span class="bullet" aria-hidden="true"></span>Brain fog or low motivation that doesn&rsquo;t match your effort</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Seafood and seaweed are the richest natural sources &mdash; sea salt does not contain iodine the way iodized salt does, so don&rsquo;t assume you&rsquo;re covered just because you use &ldquo;good&rdquo; salt.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ZINC -->
+      <article class="nutrient-card" id="zinc" aria-labelledby="zinc-heading">
+        <div class="card-top">
+          <h3 id="zinc-heading">Zinc</h3>
+          <p class="tagline">Your skin, your immune system, and your hormones all lean on this one more than people realize.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>White spots on your nails</li>
+            <li><span class="bullet" aria-hidden="true"></span>Acne or breakouts that won&rsquo;t clear up</li>
+            <li><span class="bullet" aria-hidden="true"></span>Catching every cold or bug that goes around</li>
+            <li><span class="bullet" aria-hidden="true"></span>Slow healing (cuts, breakouts, etc. take longer than they should)</li>
+            <li><span class="bullet" aria-hidden="true"></span>Hair shedding more than usual</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Pumpkin seeds, oysters, and grass-fed beef are strong sources &mdash; and if you&rsquo;re also low in magnesium, know that the two often show up together.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- COPPER -->
+      <article class="nutrient-card" id="copper" aria-labelledby="copper-heading">
+        <div class="card-top">
+          <h3 id="copper-heading">Copper <span class="card-note">(the tricky one)</span></h3>
+          <p class="tagline">Copper isn&rsquo;t just &ldquo;high&rdquo; or &ldquo;low&rdquo; &mdash; it&rsquo;s about whether your body can actually use the copper it has. This is a mineral where balance matters more than the number.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If your copper is dysregulated, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Anxiety, racing thoughts, or feeling wired for no reason</li>
+            <li><span class="bullet" aria-hidden="true"></span>PMDD or estrogen-dominant symptoms (heavy periods, tender breasts, mood swings)</li>
+            <li><span class="bullet" aria-hidden="true"></span>Migraines, especially hormonal ones</li>
+            <li><span class="bullet" aria-hidden="true"></span>Skin issues like acne or rashes</li>
+            <li><span class="bullet" aria-hidden="true"></span>Feeling emotionally reactive or easily overwhelmed</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Supporting bile flow &amp; copper clearance</p>
+            <p>Copper is cleared through bile, so the goal is to keep bile moving. A few habits that help:</p>
+            <ul class="symptom-list" style="margin-top: 10px; margin-bottom: 0;">
+              <li><span class="bullet" aria-hidden="true"></span><strong>Digestive bitters before meals</strong> &mdash; a few drops of herbal bitters (gentian, dandelion root) about 10&ndash;15 minutes before eating stimulates bile production and flow</li>
+              <li><span class="bullet" aria-hidden="true"></span><strong>ACV in water before meals</strong> &mdash; a tablespoon of raw apple cider vinegar in water helps acidify the stomach and prime digestion, which supports bile release downstream</li>
+              <li><span class="bullet" aria-hidden="true"></span><strong>Bitter foods</strong> &mdash; arugula, radicchio, endive, celery, artichoke, and radish all naturally stimulate bile; adding these to meals is a low-effort daily habit</li>
+              <li><span class="bullet" aria-hidden="true"></span><strong>Lemon water in the morning</strong> &mdash; warm lemon water first thing is a gentle liver and bile stimulant to start the day</li>
+              <li><span class="bullet" aria-hidden="true"></span><strong>Stay regular</strong> &mdash; copper leaves the body through stool, so daily bowel movements matter; if you&rsquo;re constipated, copper (and other toxins) can recirculate</li>
+              <li><span class="bullet" aria-hidden="true"></span><strong>Castor oil packs</strong> &mdash; applied over the liver area a few times a week, these are a traditional tool for supporting liver and bile duct function</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- SELENIUM -->
+      <article class="nutrient-card" id="selenium" aria-labelledby="selenium-heading">
+        <div class="card-top">
+          <h3 id="selenium-heading">Selenium</h3>
+          <p class="tagline">The mineral your thyroid needs to actually convert its hormone into a usable form.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Fatigue that sleep doesn&rsquo;t fix</li>
+            <li><span class="bullet" aria-hidden="true"></span>Hair loss</li>
+            <li><span class="bullet" aria-hidden="true"></span>Getting sick often or slow to bounce back</li>
+            <li><span class="bullet" aria-hidden="true"></span>Trouble conceiving or early pregnancy loss</li>
+            <li><span class="bullet" aria-hidden="true"></span>Hypothyroid-type symptoms even when labs look &ldquo;normal&rdquo;</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Brazil nuts are famous for a reason &mdash; just 1&ndash;2 a day can meaningfully support your selenium levels.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- CALCIUM -->
+      <article class="nutrient-card" id="calcium" aria-labelledby="calcium-heading">
+        <div class="card-top">
+          <h3 id="calcium-heading">Calcium <span class="card-note">(in balance, not just intake)</span></h3>
+          <p class="tagline">Calcium has a calming, sedating effect on your nervous system &mdash; helpful in the right amount, but a problem when it builds up as a stress response.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If it&rsquo;s out of balance, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Feeling flat, numb, or disconnected from your emotions</li>
+            <li><span class="bullet" aria-hidden="true"></span>A metabolism that feels &ldquo;stuck&rdquo; no matter what you try</li>
+            <li><span class="bullet" aria-hidden="true"></span>Constipation or sluggish digestion</li>
+            <li><span class="bullet" aria-hidden="true"></span>Feeling resistant to change, even when you want it</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low motivation or feeling stuck in freeze mode</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>This one is less about eating more calcium-rich foods and more about supporting your stress response &mdash; magnesium-rich foods and nervous-system downregulation (breathing, rest, less overexertion) matter more here.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- BORON -->
+      <article class="nutrient-card" id="boron" aria-labelledby="boron-heading">
+        <div class="card-top">
+          <h3 id="boron-heading">Boron</h3>
+          <p class="tagline">An underrated mineral for hormone production, bone health, and easing menopause symptoms.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Hot flashes</li>
+            <li><span class="bullet" aria-hidden="true"></span>Vaginal dryness</li>
+            <li><span class="bullet" aria-hidden="true"></span>Joint stiffness or achiness</li>
+            <li><span class="bullet" aria-hidden="true"></span>Brain fog or trouble with mental sharpness</li>
+            <li><span class="bullet" aria-hidden="true"></span>Bone density concerns</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Found in fruit, avocados, and beans &mdash; an easy one to boost through food alone.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- SODIUM -->
+      <article class="nutrient-card" id="sodium" aria-labelledby="sodium-heading">
+        <div class="card-top">
+          <h3 id="sodium-heading">Sodium</h3>
+          <p class="tagline">Regulated by your adrenal glands &mdash; so sodium issues are often a stress issue in disguise.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Feeling wiped out after a normal workout</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low blood pressure or dizziness when standing up</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low mood or apathy</li>
+            <li><span class="bullet" aria-hidden="true"></span>Bloating (often from low stomach acid, not too much salt)</li>
+            <li><span class="bullet" aria-hidden="true"></span>General fatigue that doesn&rsquo;t match your effort level</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>If you&rsquo;re low here, this usually isn&rsquo;t about cutting salt more &mdash; it&rsquo;s often the opposite. Adding a pinch of sea salt to water in the morning is a simple starting point.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- IRON -->
+      <article class="nutrient-card" id="iron" aria-labelledby="iron-heading">
+        <div class="card-top">
+          <h3 id="iron-heading">Iron</h3>
+          <p class="tagline">The most common deficiency in women of reproductive age &mdash; often missed because &ldquo;normal&rdquo; ranges are wide.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Fatigue that hits especially hard</li>
+            <li><span class="bullet" aria-hidden="true"></span>Pale skin, brittle nails, or hair shedding</li>
+            <li><span class="bullet" aria-hidden="true"></span>Shortness of breath with mild activity</li>
+            <li><span class="bullet" aria-hidden="true"></span>Cravings for ice or non-food items (a classic but often missed sign)</li>
+            <li><span class="bullet" aria-hidden="true"></span>Restless legs</li>
+            <li><span class="bullet" aria-hidden="true"></span>Heavy periods (which can also be the cause, not just a symptom)</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Pair iron-rich foods (red meat, spinach, lentils) with vitamin C to improve absorption &mdash; and avoid having coffee or tea right around iron-rich meals, since they block absorption.</p>
+          </div>
+        </div>
+      </article>
+
+    </section><!-- /minerals-section -->
+
+
+    <!-- ==============================
+         VITAMINS
+    ============================== -->
+    <section class="vitamins-section" aria-labelledby="vitamins-heading">
+
+      <div class="section-heading vitamins">
+        <h2 id="vitamins-heading">Vitamins</h2>
+        <div class="section-rule" aria-hidden="true"></div>
+      </div>
+
+      <!-- VITAMIN D -->
+      <article class="nutrient-card" id="vitamin-d" aria-labelledby="vitamin-d-heading">
+        <div class="card-top">
+          <h3 id="vitamin-d-heading">Vitamin D</h3>
+          <p class="tagline">Not just a vitamin &mdash; it acts more like a hormone in your body, and where you get it from actually matters.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Getting sick often or slow to recover</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low mood, especially in winter months</li>
+            <li><span class="bullet" aria-hidden="true"></span>Fatigue that doesn&rsquo;t improve with sleep</li>
+            <li><span class="bullet" aria-hidden="true"></span>Bone or joint aches</li>
+            <li><span class="bullet" aria-hidden="true"></span>Hair shedding</li>
+            <li><span class="bullet" aria-hidden="true"></span>Trouble regulating your cycle or fertility challenges</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Why sun &ne; supplement</p>
+            <p>Your skin only makes vitamin D from UVB rays, and UVB is only strong enough when the sun is high in the sky &mdash; generally within a couple hours of solar noon. Morning and evening sunlight feel great and support your circadian rhythm, but they won&rsquo;t meaningfully raise your vitamin D. When your skin does make D from midday sun, it also produces it as a sulfated form that behaves differently in your bloodstream than the D3 you take in a capsule, and sun exposure triggers other beneficial effects (like nitric oxide release for blood flow) that a supplement can&rsquo;t replicate. Oral D3 can still effectively raise your blood levels and is genuinely useful when midday sun isn&rsquo;t realistic &mdash; but it&rsquo;s not a perfect substitute for what your skin does under a high sun.</p>
+            <p><strong>Tip:</strong> Aim for a few minutes of midday sun on bare skin (arms, legs) a few times a week when possible &mdash; no sunscreen for that short window. If you&rsquo;re supplementing instead, pair D3 with vitamin K2 and magnesium so your body can actually use it properly.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- B12 -->
+      <article class="nutrient-card" id="b12" aria-labelledby="b12-heading">
+        <div class="card-top">
+          <h3 id="b12-heading">Vitamin B12</h3>
+          <p class="tagline">Essential for energy, nerve function, and red blood cell production &mdash; and one of the easiest vitamins to be low in without knowing it, especially if digestion is off.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Fatigue that feels &ldquo;bone deep&rdquo;</li>
+            <li><span class="bullet" aria-hidden="true"></span>Brain fog, poor memory, or trouble concentrating</li>
+            <li><span class="bullet" aria-hidden="true"></span>Numbness or tingling in hands/feet</li>
+            <li><span class="bullet" aria-hidden="true"></span>Pale skin or feeling short of breath easily</li>
+            <li><span class="bullet" aria-hidden="true"></span>Mood changes, low motivation, or irritability</li>
+            <li><span class="bullet" aria-hidden="true"></span>Tongue soreness or a smooth/shiny tongue</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>B12 depends on healthy stomach acid and gut function to absorb &mdash; so low stomach acid, gut infections, or long-term antacid/PPI use can cause a B12 issue even if you&rsquo;re eating enough. Vegetarians and vegans are especially prone to low intake since B12 mainly comes from animal foods.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- B6 -->
+      <article class="nutrient-card" id="b6" aria-labelledby="b6-heading">
+        <div class="card-top">
+          <h3 id="b6-heading">Vitamin B6</h3>
+          <p class="tagline">Needed for neurotransmitter production (mood!), hormone metabolism, and how your body processes protein.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>PMS or mood swings around your cycle</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low mood or irritability</li>
+            <li><span class="bullet" aria-hidden="true"></span>Trouble sleeping</li>
+            <li><span class="bullet" aria-hidden="true"></span>Nausea, especially with birth control use (it depletes B6)</li>
+            <li><span class="bullet" aria-hidden="true"></span>Water retention or bloating</li>
+            <li><span class="bullet" aria-hidden="true"></span>Cracking at the corners of the mouth</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Oral contraceptives are one of the most common causes of B6 depletion in women &mdash; worth knowing if you&rsquo;ve been on/off birth control and notice mood shifts.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- FOLATE -->
+      <article class="nutrient-card" id="folate" aria-labelledby="folate-heading">
+        <div class="card-top">
+          <h3 id="folate-heading">Folate <span class="card-note">(B9)</span></h3>
+          <p class="tagline">Critical for cell division, mood, and detoxification &mdash; especially important pre-conception and during pregnancy.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Fatigue</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low mood or feeling &ldquo;flat&rdquo;</li>
+            <li><span class="bullet" aria-hidden="true"></span>Trouble concentrating</li>
+            <li><span class="bullet" aria-hidden="true"></span>Pale skin</li>
+            <li><span class="bullet" aria-hidden="true"></span>Mouth sores</li>
+            <li><span class="bullet" aria-hidden="true"></span>Concerns with fertility or early pregnancy</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Look for &ldquo;folate&rdquo; rather than &ldquo;folic acid&rdquo; on labels when possible &mdash; folic acid is the synthetic form and some people don&rsquo;t convert it efficiently due to a common genetic variation (MTHFR), meaning they need the active form (methylfolate) instead.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- VITAMIN A -->
+      <article class="nutrient-card" id="vitamin-a" aria-labelledby="vitamin-a-heading">
+        <div class="card-top">
+          <h3 id="vitamin-a-heading">Vitamin A</h3>
+          <p class="tagline">Supports vision, skin, immune function, and &mdash; often overlooked &mdash; hormone production and thyroid conversion.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Dry skin or dry eyes</li>
+            <li><span class="bullet" aria-hidden="true"></span>Frequent infections</li>
+            <li><span class="bullet" aria-hidden="true"></span>Poor night vision</li>
+            <li><span class="bullet" aria-hidden="true"></span>Acne that won&rsquo;t resolve</li>
+            <li><span class="bullet" aria-hidden="true"></span>Slow wound healing</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>True vitamin A (retinol) comes from animal sources like liver, egg yolks, and butter &mdash; beta-carotene from plants (carrots, sweet potatoes) has to be converted, and that conversion is inefficient for a lot of people, especially with thyroid issues.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- VITAMIN K2 -->
+      <article class="nutrient-card" id="vitamin-k2" aria-labelledby="vitamin-k2-heading">
+        <div class="card-top">
+          <h3 id="vitamin-k2-heading">Vitamin K2</h3>
+          <p class="tagline">Works as a partner to vitamin D and calcium &mdash; it directs calcium to your bones and teeth instead of your arteries and soft tissue.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Easy bruising</li>
+            <li><span class="bullet" aria-hidden="true"></span>Concerns with bone density</li>
+            <li><span class="bullet" aria-hidden="true"></span>Taking vitamin D but not feeling the benefits you&rsquo;d expect</li>
+            <li><span class="bullet" aria-hidden="true"></span>Calcium buildup concerns (arteries, joints)</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Fermented foods (like natto or sauerkraut) and grass-fed dairy are natural sources &mdash; if you supplement with vitamin D, K2 is one of the most important nutrients to pair it with.</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- OMEGA-3S -->
+      <article class="nutrient-card" id="omega3" aria-labelledby="omega3-heading">
+        <div class="card-top">
+          <h3 id="omega3-heading">Omega-3s</h3>
+          <p class="tagline">Not a vitamin or mineral, but essential fats your body can&rsquo;t make on its own &mdash; they show up constantly in hormone and mood conversations.</p>
+        </div>
+        <div class="card-body">
+          <p class="symptoms-label">If you&rsquo;re low, it might show up as:</p>
+          <ul class="symptom-list">
+            <li><span class="bullet" aria-hidden="true"></span>Dry skin or brittle nails</li>
+            <li><span class="bullet" aria-hidden="true"></span>Joint stiffness or achiness</li>
+            <li><span class="bullet" aria-hidden="true"></span>Low mood or increased anxiety</li>
+            <li><span class="bullet" aria-hidden="true"></span>Brain fog</li>
+            <li><span class="bullet" aria-hidden="true"></span>Worse PMS or period pain (omega-3s help balance inflammatory hormones involved in cramping)</li>
+          </ul>
+          <div class="quick-tip">
+            <p class="tip-label">Quick tip</p>
+            <p>Fatty fish (salmon, sardines) a couple times a week is the most efficient source &mdash; plant sources like flax and chia contain a form your body has to convert, and that conversion is often inefficient.</p>
+          </div>
+        </div>
+      </article>
+
+    </section><!-- /vitamins-section -->
+
+
+    <!-- CLOSING CTA -->
+    <section class="closing" aria-labelledby="closing-heading">
+      <h2 id="closing-heading">Feeling like more than one of these sound familiar?</h2>
+      <p>That&rsquo;s actually really common &mdash; minerals and vitamins don&rsquo;t work in isolation, they work as a system. If you&rsquo;re curious about what your own patterns might look like, the HTMA and functional labs we run can show you exactly where your mineral balance stands &mdash; so you&rsquo;re not guessing.</p>
+      <a href="https://www.lifestyleucoaching.ca/functionallabs" target="_blank" rel="noopener" class="cta-btn">Learn About Our Functional Labs &rarr;</a>
+    </section>
+
+    <!-- BOTTOM DISCLAIMER -->
+    <aside class="disclaimer" role="note" aria-label="Medical disclaimer">
+      <span class="disclaimer-tag">Important note</span>
+      <p>This guide is for educational purposes only and is not intended to diagnose, treat, or replace medical care. Always work with your healthcare provider before making changes to your supplements or health routine.</p>
+    </aside>
+
+    <footer class="page-footer">
+      <p>LifestyleU &middot; <a href="https://www.instagram.com/laceeiskk" target="_blank" rel="noopener" style="color: var(--text-muted); text-decoration: none;">@laceeiskk</a></p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
